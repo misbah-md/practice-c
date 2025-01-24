@@ -3,22 +3,22 @@
 
 int main()
 {
-    int a, b;
+    int a = 0, b = 0;
     char var;
-    printf("enter the operators+,-,*,/,%");
+    printf("operators among + - * :\n");
     scanf("%c", &var);
-    printf("enter 2 numbers");
+    printf("enter the number:\n");
     scanf("%d%d", &a, &b);
     switch (var)
     {
     case '+':
-        printf("%d%d=%d+%d", a + b);
+        printf("%d + %d = %d", a, b, a + b);
         break;
     case '-':
-        printf("%d%d=%d-%d", a - b);
+        printf("%d-%d=%d",a,b, a - b);
         break;
     case '*':
-        printf("%d%d=%d*%d", a * b);
+        printf("%d*%d=%d",a,b, a * b);
         break;
     default:
         printf("not present");
