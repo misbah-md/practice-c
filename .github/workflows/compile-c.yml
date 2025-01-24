@@ -1,0 +1,24 @@
+name: Compile C Files
+
+on:
+  push:
+    branches:
+      - '*'
+    paths:
+      - 'src/**/*.c'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up C compiler
+      run: sudo apt-get install -y build-essential
+
+    - name: Compile C files
+      run: |
+        mkdir -p build
+        gcc src/*.c -o build || { echo 'Compilation failed'; exit 1; }
