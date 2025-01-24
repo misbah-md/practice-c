@@ -21,4 +21,4 @@ jobs:
     - name: Compile C files
       run: |
         mkdir -p build
-        gcc src/*.c -o build || { echo 'Compilation failed'; exit 1; }
+        gcc src/*.c -o build/output || { echo 'Compilation failed'; exit 1; }
